@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cantina da marta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1216;--card:#171b21;--muted:#aeb4bf;--text:#eef2f7;--brand:#22c55e;--brand-2:#16a34a;--accent:#fde68a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:40;background:rgba(15,18,22,.75);backdrop-filter:blur(8px);border-bottom:1px solid #222}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;color:#0b0f14;font-weight:800}
+    .brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.3px}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{font-weight:500;color:var(--muted)}
+    .menu a:hover{color:var(--text)}
+    .cta{padding:10px 14px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand-2));font-weight:700;box-shadow:0 6px 20px rgba(34,197,94,.25)}
+    .mobile-toggle{display:none;border:1px solid #2a2f36;border-radius:12px;padding:8px 10px}
+
+    .hero{position:relative;isolation:isolate}
+    .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;filter:brightness(.5)}
+    .hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(15,18,22,.9) 70%)}
+    .hero .content{position:relative;z-index:1;padding:72px 0 48px}
+    .hero h2{font-size:44px;margin:12px 0 6px;line-height:1.1}
+    .hero p{color:var(--muted);max-width:680px;margin:6px 0 22px}
+
+    .section{padding:40px 0}
+    .section h3{font-size:28px;margin:0 0 10px}
+    .section .sub{color:var(--muted);margin:0 0 22px}
+
+    .filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+    .chip{border:1px solid #2a2f36;border-radius:999px;padding:8px 14px;color:var(--muted);cursor:pointer;user-select:none}
+    .chip.active,.chip:hover{background:#1f242c;color:var(--text)}
+
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;background:var(--card);border:1px solid #232831;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+    .card img{width:100%;height:170px;object-fit:cover}
+    .card .body{padding:14px}
+    .meta{display:flex;justify-content:space-between;align-items:center;margin:8px 0 0}
+    .price{font-weight:800;background:linear-gradient(135deg,var(--accent),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .desc{color:var(--muted);font-size:14px;margin:6px 0 0}
+    .tag{font-size:12px;color:#9fb3ff;background:#1b2437;border:1px solid #24314a;border-radius:999px;padding:6px 10px}
+
+    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
+    .about .img{border-radius:18px;overflow:hidden;border:1px solid #232831}
+    .about .img img{width:100%;height:100%;object-fit:cover}
+
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .contact .card-list{display:grid;gap:12px}
+    .line{display:flex;gap:10px;align-items:center;padding:12px;border:1px solid #232831;background:var(--card);border-radius:14px;color:var(--muted)}
+    .line strong{color:var(--text)}
+    .map{border-radius:18px;overflow:hidden;border:1px solid #232831;min-height:280px}
+    iframe{display:block;width:100%;height:100%;border:0}
+
+    footer{border-top:1px solid #222;color:var(--muted);padding:24px 0;text-align:center}
+
+    @media (min-width:720px){
+      .card{grid-column:span 6}
+    }
+    @media (min-width:1024px){
+      .card{grid-column:span 4}
+    }
+    @media (max-width:840px){
+      .about{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .menu{display:none}
+      .mobile-toggle{display:inline-flex}
+      .mobile{
+        display:none;flex-direction:column;gap:10px;padding:10px 0
+      }
+      .mobile a{padding:10px;border:1px solid #232831;border-radius:12px;color:var(--muted)}
+      .mobile a:hover{color:var(--text)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class=""></div>
+          <style>
+    h1 {
+      color: rgb(64, 0, 255); /* pode ser nome da cor, código HEX ou RGB */
+    }
+  </style>
+        <h1><font size="15">Restaurante Martachef</font></h1>
+      </div>
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a class="cta" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Abrir menu" onclick="toggleMobile()">☰</button>
+  
+  </header>
+
+  <section class="hero">
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <div class="container content">
+
+      <h2>Comida de verdade, preço justo e aquele sabor de casa.</h2>
+      <p>Aberto segunda á sábado  das 11:00  às 14:00 horas. </p>
+      <a class="cta" href="#cardapio">Ver Cardápio</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="cardapio" class="section">
+      <h3>Cardápio</h3>
+      <p class="sub">Selecione uma categoria para filtrar.</p>
+      <div class="filters" role="tablist">
+        <button class="chip active" data-filter="all" onclick="filterItems(event)">Todos</button>
+        <button class="chip" data-filter="pratos" onclick="filterItems(event)">Pratos</button>
+        <button class="chip" data-filter="massas" onclick="filterItems(event)">Massas</button>
+        <button class="chip" data-filter="bebidas" onclick="filterItems(event)">Bebidas</button>
+        <button class="chip" data-filter="sobremesas" onclick="filterItems(event)">Sobremesas</button>
+      </div>
+
+      <div class="grid" id="menuGrid">
+        <!-- PRATOS -->
+        <article class="card" data-category="pratos">
+          <img alt="Feijoada" src="fejoada.jpeg" />
+          <div class="body">
+            <div class="meta">
+              <h4>Feijoada Completa</h4>
+              <div class="price">R$24,00 a grande e R$15,00 a pequena</div>
+            </div>
+            <p class="desc">Feijão preto, carnes selecionadas, arroz, farofa e couve refogada.</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="pratos">
+          <img alt="bife de boi" src="bife_boi.jpeg" />
+          <div class="body">
+            <div class="meta">
+              <h4>Bife de contra filé frito na hora </h4>
+          
+            </div>
+            
+          </div>
+        </article>
+
+        <!-- MASSAS -->
+        <article class="card" data-category="massas">
+          <img alt="Lasanha" src="lasanha.jpeg" />
+          <div class="body">
+            <div class="meta">
+              <h4>Lasanha à Bolonhesa</h4>
+              <div class="price">R$ 24,00 a grande e R$ 15,00 a pequena</div>
+            </div>
+            <p class="desc">Massa fresca, ragu de carne, molho de tomate e queijo gratinado.</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="massas">
+          <img alt="Pizza Margherita" src="" />
+          <div class="body">
+            <div class="meta">
+              <h4></h4>
+              <div class="price"></div>
+            </div>
+            <p class="desc"></p>
+          </div>
+        </article>
+
+        <!-- BEBIDAS -->
+        <article class="card" data-category="bebidas">
+          <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwLq1Df0XRZkNwf8JuyEzvUHooK0v9MQparA&s" />
+          <div class="body">
+            <div class="meta">
+              <h4>refrigerante Guraná (300 ml)</h4>
+              <div class="price">R$ 4,00</div>
+            </div>
+            
+          </div>
+        </article>
+
+        <article class="card" data-category="bebidas">
+          <img alt="coca cola" src="coca.png" />
+          <div class="body">
+            <div class="meta">
+              <h4>refrigerante cola cola lata 300ml</h4>
+              <div class="price">R$ 5,00</div>
+            </div>
+    
+          </div>
+        </article>-
+
+        <!-- SOBREMESAS -->
+
+        
+      </div>
+      
+    </section>
+
+    <section id="sobre" class="section about">
+      <div>
+        <h3>Sobre nós</h3>
+        <p class="sub">Meu nome é Irany Marta Borges sou  Formada em Gastronomia, o Restournte Martachef foi criado em 05/02/2020 com intúito de oferecer uma comida saldável e de qualidade. 
+        </p>
+        <p></p>
+      </div>
+      <div class="img">
+        <img alt="" src="c:\Users\euxil\Downloads\dc32fe38-ce2c-4fb4-afc1-c1b8085e05b8.jpeg" />
+      </div>
+    </section>
+
+    <section id="contato" class="section contact">
+      <div class="card-list">
+        <h3>Contato</h3>
+        <div class="line"><span>📍</span><span><strong>Endereço:</strong> Av. Exemplo, 1234 – Centro, Sua Cidade</span></div>
+        <div class="line"><span>⏰</span><span><strong>Horário:</strong> Todos os dias, 11h–23h</span></div>
+        <div class="line"><span>📞</span><span><strong>Telefone:</strong> (00) 0000-0000</span></div>
+        <div class="line"><span>💬</span><span><strong>WhatsApp:</strong> <a class="tag" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Chamar no Whats</a></span></div>
+        <div class="line"><span>🛵</span><span><strong>Delivery:</strong> Retirada no balcão e entrega por apps parceiros</span></div>
+      </div>
+      <div class="map">
+        <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.831841047747!2d-46.65657328488817!3d-23.57418366704401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8c4b76a2f%3A0x7b8a4d7ea1e5f5a1!2sParque%20do%20Ibirapuera!5e0!3m2!1spt-BR!2sBR!4v1688600000000"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Cantina Sabor & Arte — Todos os direitos reservados.</div>
+  </footer>
+
+  <script>
+    function filterItems(e){
+      const f = e.target.getAttribute('data-filter');
+      document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+      e.target.classList.add('active');
+      document.querySelectorAll('#menuGrid .card').forEach(card=>{
+        const cat = card.getAttribute('data-category');
+        card.style.display = (f==='all' || f===cat) ? 'flex' : 'none';
+      });
+    }
+    function toggleMobile(){
+      const el = document.getElementById('mobileMenu');
+      el.style.display = el.style.display==='flex' ? 'none' : 'flex';
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
