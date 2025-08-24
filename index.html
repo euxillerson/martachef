@@ -25,7 +25,6 @@
     .menu a:hover{color:var(--text)}
     .cta{padding:10px 14px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand-2));font-weight:700;box-shadow:0 6px 20px rgba(34,197,94,.25)}
     .mobile-toggle{display:none;border:1px solid #2a2f36;border-radius:12px;padding:8px 10px}
-
     .hero{position:relative;isolation:isolate}
     .hero .bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;filter:brightness(.5)}
     .hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(15,18,22,.9) 70%)}
@@ -43,10 +42,10 @@
 
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
     .card{grid-column:span 12;background:var(--card);border:1px solid #232831;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-    .card img{width:100%;height:170px;object-fit:cover}
+    .card img{width:100%;height:300px;object-fit:cover}
     .card .body{padding:14px}
     .meta{display:flex;justify-content:space-between;align-items:center;margin:8px 0 0}
-    .price{font-weight:800;background:linear-gradient(135deg,var(--accent),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .price{font-weight:100%;background:linear-gradient(135deg,var(--accent),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
     .desc{color:var(--muted);font-size:14px;margin:6px 0 0}
     .tag{font-size:12px;color:#9fb3ff;background:#1b2437;border:1px solid #24314a;border-radius:999px;padding:6px 10px}
 
@@ -60,9 +59,7 @@
     .line strong{color:var(--text)}
     .map{border-radius:18px;overflow:hidden;border:1px solid #232831;min-height:280px}
     iframe{display:block;width:100%;height:100%;border:0}
-
     footer{border-top:1px solid #222;color:var(--muted);padding:24px 0;text-align:center}
-
     @media (min-width:720px){
       .card{grid-column:span 6}
     }
@@ -98,9 +95,7 @@
         <a href="#cardapio">Cardápio</a>
         <a href="#sobre">Sobre</a>
         <a href="#contato">Contato</a>
-        <a class="cta" href="https://api.whatsapp.com/send/?phone=5531989773375" target="_blank" rel="noopener">Chamar no Whats</a>
-      </nav>
-      <button class="mobile-toggle" aria-label="Abrir menu" onclick="toggleMobile()">☰</button>
+        
   </div>
   </header>
   <section class="hero">
@@ -108,27 +103,19 @@
     <div class="overlay"></div>
     <div class="container content">
 
-      <h2>Comida de verdade,pelo  preço justo e aquele sabor de casa.</h2>
+      <h2 style="font-family: Arial; font-size: 25px;color:#16a34a">   Comida de verdade,pelo  preço justo e aquele sabor de casa.Trabalhamos só com derivelry </h2>
       <p>Aberto segunda ao sábado  das 11:00  às 14:00 horas.
           Trabalhamos só com derivelry </p>
-      <a class="cta" href="#cardapio">Ver Cardápio</a>
+      
       <a class="cta" href="https://api.whatsapp.com/send/?phone=5531989773375" target="_blank" rel="noopener">Chamar no Whats</a>
+      <p>chame no zap e fale direto com nossos atendentes</p>
       </nav>
       <button class="mobile-toggle" aria-label="Abrir menu" onclick="toggleMobile()">☰</button>
     </div>
   </section>
-
   <main class="container">
-    <section id="cardapio" class="section">
-      <h3>Cardápio</h3>
-      <p class="sub">Selecione uma categoria para filtrar.</p>
-      <div class="filters" role="tablist">
-        <button class="chip active" data-filter="all" onclick="filterItems(event)">Todos</button>
-        <button class="chip" data-filter="pratos" onclick="filterItems(event)">Pratos</button>
-        <button class="chip" data-filter="massas" onclick="filterItems(event)">Massas</button>
-        <button class="chip" data-filter="bebidas" onclick="filterItems(event)">Bebidas</button>
-        <button class="chip" data-filter="sobremesas" onclick="filterItems(event)">Sobremesas</button>
-      </div>
+    <section id="cardapio" class="section">     
+        <a href="https://padlet.com/euxillerson/marmitex-q6kh1077t0rb9651" style="font-family:Arial;font-size:25px; color:blue;">  Click aqui para consutar promoções e o Cardápio do dia 2</a>
 
       <div class="grid" id="menuGrid">
         <!-- PRATOS -->
@@ -142,18 +129,14 @@
             <p class="desc">Feijão preto, carnes selecionadas, arroz, farofa e couve refogada.</p>
           </div>
         </article>
-
         <article class="card" data-category="pratos">
           <img alt="bife de boi" src="bife_boi.jpeg" />
           <div class="body">
             <div class="meta">
-              <h4>Bife de contra filé frito na hora </h4>
-          
-            </div>
-            
+              <h4>Bife de contra filé frito na hora </h4>        
+            </div>        
           </div>
         </article>
-
         <!-- MASSAS -->
         <article class="card" data-category="massas">
           <img alt="Lasanha" src="lasanha.jpeg" />
@@ -162,55 +145,34 @@
               <h4>Lasanha à Bolonhesa</h4>
               <div class="price">R$ 24,00 a grande e R$ 15,00 a pequena</div>
             </div>
-
           </div>
         </article>
-
+        
         <article class="card" data-category="massas">
-          <img alt="água" src="agua.png" />
+          <img alt="água" src="https://tse4.mm.bing.net/th/id/OIP.VNvb5lL-Tjk4oUAxX4v9MAHaHa?pid=Api&P=0&h=180"  />
           <div class="body">
             <div class="meta">
-              <h4> preço R$ 3,00</h4>
+              <h4> Água mineral com gásR$ 3,00</h4>
               <div class="price"></div>
             </div>
             <p class="desc"></p>
           </div>
         </article>
-
         <!-- BEBIDAS -->
         <article class="card" data-category="bebidas">
-          <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwLq1Df0XRZkNwf8JuyEzvUHooK0v9MQparA&s" />
+          <img alt="" src="https://www.nicepng.com/png/detail/403-4035156_latinha-de-refrigerante-png-blank-soda-can.png" />
           <div class="body">
             <div class="meta">
               <h4>refrigerante Guraná (300 ml)</h4>
-              <div class="price">R$ 4,00</div>
-            </div>
-            
-          </div>
-        </article>
-
-        <article class="card" data-category="bebidas">
-          <img alt="coca cola" src="coca.png" />
-          <div class="body">
-            <div class="meta">
-              <h4>refrigerante cola cola lata 300ml</h4>
-              <div class="price">R$ 5,00</div>
-            </div>
-    
-          </div>
-        </article>-
-
-        <!-- SOBREMESAS -->
-
+              <div class="">R$ 4,00</div>          
         
-      </div>
-      
+        <!-- SOBREMESAS -->        
+      </div>      
     </section>
-
     <section id="sobre" class="section about">
       <div>
-        <h3>Sobre nós</h3>
-        <p class="sub">Meu nome é Irany Marta Borges sou  Formada em Gastronomia, o Restournte Martachef foi criado em 05/02/2020 com intúito de oferecer uma comida saldável e de qualidade. 
+        <h3>Sobre mim</h3>
+        <p class="sub">Meu nome é Irany Marta Borges sou  Formada em Gastronomia, o Restaurante Martachef foi criado em 05/02/2020 com intúito de oferecer uma comida saldável e de qualidade preço. 
         </p>
         <p></p>
       </div>
@@ -218,7 +180,6 @@
         <img alt="" src="foto.png" />
       </div>
     </section>
-
     <section id="contato" class="section contact">
       <div class="card-list">
         <h3>Contato</h3>
@@ -232,11 +193,9 @@
       </div>
     </section>
   </main>
-
   <footer>
     <div class="container">© <span id="year"></span>Resataurante MartaC— Todos os direitos reservados.</div>
   </footer>
-
   <script>
     function filterItems(e){
       const f = e.target.getAttribute('data-filter');
